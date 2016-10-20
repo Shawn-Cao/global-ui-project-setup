@@ -44,7 +44,7 @@ function compileLayouts(resources) {
 //copy font-awesome into assets/css/font-awesome
 function copyStaticResources(resources) {
   for (var resource in resources) {
-    if (!buildConfig.hasOwnProperty(resource)) { continue; }
+    if (!resources.hasOwnProperty(resource)) { continue; }
     let path = resources[resource];
     copy(path[0], path[1], function(err){
     if(err){ console.log(err); } else { console.log(`copied ${resource} from ${path[0]} and serve from ${path[1]}`); }
