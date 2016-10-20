@@ -1,0 +1,9 @@
+---
+applications:
+- name: tma-assets
+  buildpack: staticfile_buildpack
+  path: ./assets
+  memory: 64M
+  disk_quota: 128M
+  env:
+    #APP_ROOT: assets  #//setup NginX service per https://github.com/cloudfoundry/staticfile-buildpack/blob/master/conf/nginx.conf#L35

@@ -1,0 +1,42 @@
+{
+  "name": "tma-assets",
+  "version": "0.2.1",
+  "description": "styles for T-Mobile micro-app",
+  "scripts": {
+    "build": "node build.js",
+    "start": "node build.js",
+    "test": "echo 'no test plans yet'",
+    "prepublish": "node build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.internal.t-mobile.com:7999/qvxp/tms-libraries.git"
+  },
+  "keywords": [
+    "TMA",
+    "Angular",
+    "styles",
+    "microservice"
+  ],
+  "author": "Shawn Cao",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "http://jira1.internal.t-mobile.com:8080/projects/FLAME/issues/"
+  },
+  "homepage": "https://qwiki.internal.t-mobile.com/display/FLAME/Flame+Developer+Guide",
+  "dependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
+    "font-awesome": "^4.6.1"
+  },
+  "peerDependencies": {
+    "bootstrap": "^4.0.0-alpha.2",
+    "font-awesome": "^4.6.1"
+  },
+  "devDependencies": {
+    "copy": "^0.3.0",
+    "live-server": "^1.1.0",
+    "node-sass": "=3.10.0",
+    "node-watch": "^0.4.0",
+    "scss-compile": "^0.1.7"
+  }
+}

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+  <title>System Error page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="icon" type="../image/x-icon" href="/img/favicon.ico">
+  <link href="../css/master.minified.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="header">
+
+  </header><!-- /.header -->
+
+  <div class="container container-main" style="min-height: 28rem;">
+    <div id="title" class="card-header"></div>
+    <div id="message" class="card-body card-padding m-x-1 m-t-2"></div>
+  </div>
+
+  <footer class="footer">
+      
+  </footer><!-- footer -->
+
+
+
+  <script>
+  var params = getSearchParameters();
+  if(params) {
+    displayDiv(params);
+  }
+
+  function getSearchParameters() {
+    var prmstr = window.location.search.substr(1);
+    return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+  }
+
+  function transformToAssocArray( prmstr ) {
+    var params = {};
+    var prmarr = prmstr.split("&");
+    for ( var i = 0; i < prmarr.length; i++) {
+      var tmparr = prmarr[i].split("=");
+      params[tmparr[0]] = decodeURIComponent(tmparr[1]);
+    }
+    return params;
+  }
+
+  function displayDiv(queryMap) {
+    var h2 = document.createElement("h2");
+    var node_h2 = document.createTextNode(queryMap.title || "System Error!");
+    h2.appendChild(node_h2);
+    document.getElementById("title").appendChild(h2);
+
+    var p = document.createElement("p");
+    var node_p = document.createTextNode(queryMap.message || "Some problem happened while loading your page and we are working on it. Please raise a ticket to help troubleshooting :-)");
+    p.appendChild(node_p);
+    document.getElementById("message").appendChild(p);
+  }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <title>@api.htmlTitle@</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <!-- <base href="/"> removed this as it mess up URL serving from API gateway -->
+  <base href="/@app.name@/">
+  <link href="/assets/css/master.minified.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
+  <link href="css/app.css" rel="stylesheet" type="text/css" />
+
+  <style type="text/css">
+  [ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+  }
+  </style>
+  <script>
+  if (!Array.prototype.find) {  //for IE11 only, reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find#Browser_compatibility
+    Array.prototype.find = function(predicate) {
+      'use strict';
+      if (this == null) {
+        throw new TypeError('Array.prototype.find called on null or undefined');
+      }
+      if (typeof predicate !== 'function') {
+        throw new TypeError('predicate must be a function');
+      }
+      var list = Object(this);
+      var length = list.length >>> 0;
+      var thisArg = arguments[1];
+      var value;
+
+      for (var i = 0; i < length; i++) {
+        value = list[i];
+        if (predicate.call(thisArg, value, i, list)) {
+          return value;
+        }
+      }
+      return undefined;
+    };
+  }
+  </script>
+</head>
+<body>
+  <app></app>
+</body>
+</html>

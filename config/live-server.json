@@ -1,0 +1,10 @@
+{
+  "port": 7069,
+  "root": "./",
+  "wait": 1500,
+  "watch": [
+    "scss/",
+    "partials/",
+    "index.html"
+  ]
+}

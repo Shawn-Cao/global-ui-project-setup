@@ -1,0 +1,10 @@
+assets/*
+!assets/img/
+layouts/*
+
+node_modules
+./DS_Store
+.sass-cache
+
+*.log
+*.tgz

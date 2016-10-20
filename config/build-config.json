@@ -1,0 +1,13 @@
+{
+  "layouts": {
+    "all":    ["./partials/layouts/*", "./layouts"],
+    "index.html":     ["./partials/layouts/index.html", "./layouts"],
+    "layout-default": ["./partials/layouts/default.html", "./layouts"],
+    "layout-blank":   ["./partials/layouts/blank.html", "./layouts"]
+  },
+  "staticResources": {
+    "font-awesome":   ["./node_modules/font-awesome/fonts/*", "./assets/fonts"],
+    "tmo-fonts":      ["./tmo-fonts/*", "./assets/fonts"],
+    "error-pages":    ["./partials/error/*", "./assets/error"]
+  }
+}
